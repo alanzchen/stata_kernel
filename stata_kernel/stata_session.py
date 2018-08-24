@@ -342,6 +342,7 @@ class StataSession():
         if self.config.get('execution_mode') == 'console':
             child.sendcontrol('c')
             child.sendcontrol('d')
+            child.sendline('error 1')
         else:
             self.automate('UtilSetStataBreak')
 
